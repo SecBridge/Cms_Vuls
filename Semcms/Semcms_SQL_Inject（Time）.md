@@ -14,7 +14,7 @@ v4.8 Download Link: http://www.sem-cms.com/TradeCmsdown/php/semcms_php_4.8.zip
 
 There is a SQL injection vulnerability in SEMCMS v4.8. The vulnerability stems from the lack of verification of the external input SQL statement in the parameter AID of SEMCMS_Function.php. An attacker can use this vulnerability to execute illegal SQL commands to obtain sensitive data in the database.
 
-#### Vulnerability analysis
+### Vulnerability analysis
 
 The vulnerability exists on line 316 of SEMCMS_Function.php:
 
