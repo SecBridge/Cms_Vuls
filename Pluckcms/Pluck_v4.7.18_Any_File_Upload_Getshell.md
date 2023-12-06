@@ -19,30 +19,30 @@ It should be emphasized that once the uploaded malicious module ZIP installation
 
 This vulnerability exists in /data/inc/modules_install.php：
 
-![image-20231206112846888](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206112846888.png)
+![image-20231206112846888](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206112846888.png)
 
 Reference the module in data/inc/modules_manage.php:
 
-![image-20231206113402099](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206113402099.png)
+![image-20231206113402099](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206113402099.png)
 
 ### 漏洞演示
 
 1、Log in to the backend -> click on ”options“ ->Select "manage modules" -> click "install modules"：
 
-![image-20231206122628760](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206122628760.png)
+![image-20231206122628760](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206122628760.png)
 
 2、Upload eval.zip with malicious shell file:
 
-![image-20231206122757780](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206122757780.png)
+![image-20231206122757780](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206122757780.png)
 
 3、Check the backend and see that the relevant shell file was successfully uploaded:
 
-![image-20231206123139923](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206123139923.png)
+![image-20231206123139923](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206123139923.png)
 
 4、Enter specific parameters anywhere in the system and execute any command:
 
-![image-20231206123001850](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206123001850.png)
+![image-20231206123001850](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206123001850.png)
 
 5、You can also access the relevant shell to execute any command:
 
-![image-20231206123312823](F:\实战\CMS代码审计笔记\Pluckcms\Pluck_v4.7.18_Any_File_Upload_Getshell.assets\image-20231206123312823.png)
+![image-20231206123312823](https://github.com/SecBridge/Bridge/blob/main/Pluckcms/image/image-20231206123312823.png)
