@@ -14,7 +14,7 @@ EmpireCMS v7.5 has a template injection vulnerability. An authenticated remote a
 
 The vulnerability exists in line 425 of tmepfun. Due to the lack of effective validation of the parameter content passed in by the frontend, malicious content can be referenced and generate an index page template file, resulting in malicious content being written
 
-![image-20231206113402099](https://github.comSecBridge/Cms_Vuls/blob/main/EmpireCMS/image/image-20240730103644857.png)
+![image-20231206113402099]([https://github.comSecBridge/Cms_Vuls/blob/main/EmpireCMS/image/image-20240730103644857.png](https://github.com/SecBridge/Cms_Vuls/blob/main/EmpireCMS/image/image-20240730103644857.png))
 
 ### Vulnerability reproduction
 
